@@ -61,8 +61,7 @@ local function Run_CPP_Auto()
 
   -- Feed the input content from the temporary file to the compiled code
   vim.cmd("term ./hello < " .. vim.fn.shellescape(temp_file))
-  vim.cmd("wincmd l") -- Switch to the quickfix/location window
-  --
+  vim.cmd("wincmd l")
   vim.cmd("startinsert")
   vim.cmd("redraw!")
   vim.cmd("cwindow")
