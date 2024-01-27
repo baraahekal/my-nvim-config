@@ -8,7 +8,6 @@ local function Run_CPP()
   -- Set the working directory to the directory of the current file
   vim.cmd("lcd " .. current_dir)
 
-  -- Compile the C++ file
   vim.cmd('!g++ -std=c++11"' .. current_file .. '" -o hello')
 
   -- Open a new split for the output
