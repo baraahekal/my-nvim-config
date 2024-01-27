@@ -1,0 +1,11 @@
+{
+    "diagnostics.disable": [
+        "missing-fields",
+        "undefined-doc-name"
+    ],
+    "diagnostics.globals": [
+        "vim",
+        "lazy",
+        "getClipboardContent"
+    ]
+}
