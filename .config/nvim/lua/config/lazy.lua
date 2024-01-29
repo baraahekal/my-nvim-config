@@ -5,11 +5,6 @@ if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({ "git", "clone", "--filter=blob:none", "https://github.com/folke/lazy.nvim.git", "--branch=stable", lazypath })
 end
 vim.opt.rtp:prepend(vim.env.LAZY or lazypath)
--- init.lua or your Neovim configuration file
-
--- Function to run C++ code
--- Optional: You can uncomment the line below to yank the entire buffer to the system clipboard
--- vim.api.nvim_set_keymap("n", "<C-w>", ":w !xclip -selection clipboard<CR>", { noremap = true, silent = true })
 
 require("lazy").setup({
   spec = {

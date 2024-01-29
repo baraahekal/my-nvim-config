@@ -10,8 +10,14 @@ if true then return {} end
 -- * override the configuration of LazyVim plugins
 return {
   -- add gruvbox
+  { "mfussenegger/nvim-dap" },
+  { "mfussenegger/nvim-dap", "rcarriga/nvim-dap-ui" },
+  {
+    "williamboman/mason.nvim",
+    "mfussenegger/nvim-dap",
+    "jay-babu/mason-nvim-dap.nvim",
+  },
   { "ellisonleao/gruvbox.nvim" },
-
   -- Configure LazyVim to load gruvbox
   {
     "LazyVim/LazyVim",
@@ -140,6 +146,7 @@ return {
     "nvim-treesitter/nvim-treesitter",
     opts = {
       ensure_installed = {
+        "bash",
         "html",
         "javascript",
         "json",
@@ -148,8 +155,11 @@ return {
         "markdown_inline",
         "python",
         "query",
+        "regex",
+        "tsx",
+        "typescript",
         "vim",
-        "cpp",
+        "yaml",
       },
     },
   },
@@ -162,8 +172,8 @@ return {
     opts = function(_, opts)
       -- add tsx and treesitter
       vim.list_extend(opts.ensure_installed, {
-        "cpp",
-        "python",
+        "tsx",
+        "typescript",
       })
     end,
   },
@@ -203,6 +213,8 @@ return {
         "shellcheck",
         "shfmt",
         "flake8",
+        "clangd",
+        "clang-format",
       },
     },
   },

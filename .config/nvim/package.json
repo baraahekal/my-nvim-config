@@ -1,0 +1,22 @@
+{
+  "contributes": {
+    "snippets": [
+      {
+        "language": "cpp",
+        "path": "snippets/all.json"
+      }
+    ]
+  },
+  "engines": {
+    "vscode": "^1.11.0"
+  },
+  "extras": [
+
+  ],
+  "name": "personal-snippets",
+  "news": {
+    "NEWS.md": "2123"
+  },
+  "version": 2
+}
+

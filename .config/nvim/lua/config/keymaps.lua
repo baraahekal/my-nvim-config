@@ -1,7 +1,17 @@
 -- Keymaps are automatically loaded on the VeryLazy event
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
--- Add any additional keymaps here
+vim.keymap.set(
+  "n",
+  "<leader>sx",
+  require("telescope.builtin").resume,
+  { noremap = true, silent = true, desc = "Resume" }
+)
 
--- Key mappings
-vim.keymap.set("n", "<leader>raw", ":lua Run_CPP()<CR>", { noremap = true, silent = true })
-vim.keymap.set("n", "<C-t>", ":lua Past_Tests()<CR>", { noremap = true, silent = true })
+-- for selecting all file
+vim.api.nvim_set_keymap("n", "Y", ":normal ggVG<CR>", { noremap = true, silent = true })
+
+-- for window resizing
+vim.api.nvim_set_keymap("n", "<c-]>", ":resize +1<cr>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<c-[>", ":resize -1<cr>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<c-]>", ":vertical resize +1<cr>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<C-[>", ":vertical resize -1<CR>", { noremap = true, silent = true })
